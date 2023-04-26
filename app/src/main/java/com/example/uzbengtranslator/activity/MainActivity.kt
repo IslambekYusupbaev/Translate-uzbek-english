@@ -95,12 +95,10 @@ class MainActivity : AppCompatActivity() {
                             )
                             isUzWordEntered = true
                         } else {
+                            viewModel.translate(binding.edtText.text.toString(),getString(R.string.en),getString(R.string.uz))
                             isUzWordEntered = false
-                            Toast.makeText(
-                                this@MainActivity,
-                                "O'zbekshe so'z ems",
-                                Toast.LENGTH_SHORT
-                            ).show()
+
+
                         }
                     }
                     is UiStateObject.ERROR -> {
